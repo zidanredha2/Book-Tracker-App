@@ -28,7 +28,7 @@ export const BookProvider = ({children}) => {
         await AsyncStorage.setItem('toReadList', JSON.stringify(updatedToRead));
         const UpdatedDone = [...doneReading, book];
         setDoneReading(UpdatedDone);
-        await AsyncStorage.setItem('doneList', JSON.stringify(UpdatedDone));
+        await AsyncStorage.setItem('doneReadingList', JSON.stringify(UpdatedDone));
     }
     return (
     <BookContext.Provider value={{ toRead, doneReading, addToRead, moveToDone }}>
