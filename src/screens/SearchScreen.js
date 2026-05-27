@@ -48,7 +48,9 @@ export default function SearchScreen({ navigation }) {
         <Button title="Search" onPress={searchBooks} color="#2563eb" />
       </View>
 
-      {loading && <ActivityIndicator size="large" color="#4A90E2" style={{ marginVertical: 20 }} />}
+      {loading ? (
+  <ActivityIndicator size="large" color="#60a5fa" style={{ marginVertical: 20 }} />
+) : null}
       {statusMessage ? <Text style={styles.infoText}>{statusMessage}</Text> : null}
 
       <FlatList 
